@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="Calculator.mortgagePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+	<Grid Background="	#d7f4ef">
+		<TextBlock FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" Text="Mortgage Calculator"/>
+
+		<TextBlock Text="Principal borrow $:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,100,0,0"/>
+		<TextBox Name="txtPrincipal" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="220,100,0,0" />
+
+		<TextBlock Text="Years:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,150,0,0"/>
+		<TextBox Name="txtYears" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="220,150,0,0" />
+
+		<TextBlock Text="and Months:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,200,0,0"/>
+		<TextBox Name="txtMonths" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="220,200,0,0" />
+
+		<TextBlock Text="Yearly Interest Rate:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,250,0,0"/>
+		<TextBox Name="txtInterestRate" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="220,250,0,0" />
+
+		<TextBlock Text="Monthly Interest Rate:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,300,0,0"/>
+		<TextBox Name="txtMonthlyInterestRate" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="220,300,0,0" IsReadOnly="True"/>
+
+		<TextBlock Text="Monthly Repayment $:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,350,0,0"/>
+		<TextBox Name="txtMonthlyRepayment" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="220,350,0,0" IsReadOnly="True"/>
+
+		<Button x:Name="calButton" Content="Calculate" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="500,150,0,0" Click="Calculate_Click"/>
+		<Button x:Name="exitButton" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="500,200,0,0" Click="Exit_Click"/>
+
+	</Grid>
+</Page>
