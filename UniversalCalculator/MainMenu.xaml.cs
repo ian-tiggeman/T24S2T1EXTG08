@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Devices.Enumeration;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -29,8 +31,8 @@ namespace Calculator
 
 		private void mathButton_Click(object sender, RoutedEventArgs e)
 		{
-
-        }
+			this.Frame.Navigate(typeof(MathCalculator));
+		}
 
 		private void mortgageButton_Click(object sender, RoutedEventArgs e)
 		{
@@ -39,12 +41,12 @@ namespace Calculator
 
 		private void currencyButton_Click(object sender, RoutedEventArgs e)
 		{
-
+			this.Frame.Navigate(typeof(currencyConverter));
 		}
 
 		private void exitButton_Click(object sender, RoutedEventArgs e)
 		{
-			
+			ApplicationView.GetForCurrentView().TryConsolidateAsync();
 		}
 	}
 }
