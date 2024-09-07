@@ -68,7 +68,8 @@ namespace Calculator
 
 		private void Exit_Click(object sender, RoutedEventArgs e)
 		{
-			Application.Current.Exit();
+			// Return to main menu
+			this.Frame.Navigate(typeof(MainMenu));
 		}
 	}
 }
