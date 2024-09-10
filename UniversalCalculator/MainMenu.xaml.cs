@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Devices.Enumeration;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -48,5 +49,11 @@ namespace Calculator
 		{
 			ApplicationView.GetForCurrentView().TryConsolidateAsync();
 		}
-	}
+
+		private async void tripButton_Click(object sender, RoutedEventArgs e)
+		{
+			var dialogMessage = new MessageDialog("Trip calculator C# code will be developed later");
+			await dialogMessage.ShowAsync();
+		}
+    }
 }
